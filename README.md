@@ -44,6 +44,13 @@ $ ./q2.sh
 The secret is ******
 ```
 
+## HINTS
+
+In the example below, we create a JWT with an empty payload and sign with the phrase
+"here_is_my_secret".  When this is sent to the
+`https://learn.operatoroverload.com/~jmadar/lab7/q2.sh`, the return message
+tells you that the phrase is incorrect.  Your job is to find the correct
+secret phrase using a bash script.
 
 ```console
 $ HEADER='{"alg":"HS256","typ":"JWT"}'
@@ -60,13 +67,7 @@ JWT Signature: 9d4jsGXa4QnZlAhi5pwp-c8jrGsvIt_2NBwhHIMpE3U
 Verificaion Signature: 7tiyRKOwOsp5fLXrdY2HZ2gQtPl-J9NIw0wTX45umII
 ```
 
-In the above, we create a JWT with an empty payload and sign with the phrase
-"here_is_my_secret".  When this is sent to the
-`https://learn.operatoroverload.com/~jmadar/lab7/q2.sh`, the return message
-tells you that the phrase is incorrect.  Your job is to find the correct
-secret phrase using a bash script.
-
-HINT: You basically need to run a loop on the SIGNATURE line, each time with a
+You basically need to run a loop on the SIGNATURE line, each time with a
 new password from the 150 common password file.
 
 The following bash code takes the first 150 passwords and echo it to the terminal:
