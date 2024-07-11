@@ -82,3 +82,12 @@ done
 
 Put your solution in a script file called `q2.sh`, make sure it's executable.
 
+# Hand-in
+
+Run `pytest` on the top level directory.  
+
+When you are satisified, run the following commands to submit:
+
+  - git add -A
+  - git commit -a -m 'submit'
+  - git push
