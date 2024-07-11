@@ -21,7 +21,7 @@ Authorization: Bearer
 header to https://learn.operatoroverload.com/~jmadar/lab7/q1.sh.
 If you get a http status 200 code, you got it correct.  
 
-Put your curl call inside a text file called `q1.sh`
+Put your token in a file called `q1.txt`
 
 # Question 2
 
@@ -35,11 +35,17 @@ out that the programmer pick the secret from one of the first 150 common
 passwords
 (https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt) 
 
-Write a bash script to figure out the secret.
+Write a bash script `q2.sh` to figure out the secret.
 
 See the below terminal interaction.
 
-```bash
+```console
+$ ./q2.sh 
+The secret is ******
+```
+
+
+```console
 $ HEADER='{"alg":"HS256","typ":"JWT"}'
 $ PAYLOAD="{}"
 $ B64_HEADER=$(echo -n "$HEADER" | base64 | tr '+' '-' | tr '/' '_' | tr -d '=')
