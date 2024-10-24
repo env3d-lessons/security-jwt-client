@@ -18,7 +18,7 @@ correctly by sending this jwt with the
 Authorization: Bearer
 ```
 
-header to https://learn.operatoroverload.com/~jmadar/lab7/q1.sh.
+header to https://learn.operatoroverload.com/~jmadar/jwt-client/q1.sh.
 If you get a http status 200 code, you got it correct.  
 
 Put your token in a file called `q1.txt`
@@ -27,7 +27,7 @@ Put your token in a file called `q1.txt`
 
 Let's do some brute force hacking!
 
-The URL `https://learn.operatoroverload.com/~jmadar/lab7/q2.sh`
+The URL https://learn.operatoroverload.com/~jmadar/jwt-client/q2.sh
 would only return http status 200 if it is called with a valid token
 (payload doesn't matter).  The token uses the hmac-sha256 algorithm
 for its signature but you don’t know the secret.  However, you found
