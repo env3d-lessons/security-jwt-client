@@ -8,7 +8,7 @@ def test_q1_file():
 def test_q1_valid():
     with open('q1.txt') as f:
         jwt = f.read().strip()
-        test_url = 'https://learn.operatoroverload.com/~jmadar/lab7/q1.sh';
+        test_url = 'https://learn.operatoroverload.com/~jmadar/jwt-client/q1.sh';
         result = os.popen(f'curl -s --head -H "Authorization: Bearer {jwt}" {test_url}').read()
         assert '200' in result
 
@@ -26,7 +26,7 @@ def test_q2_content_1(q2_content):
 
 def test_q2_content_2(q2_content):
     assert 'curl' in q2_content, "Must use curl"
-    assert 'https://learn.operatoroverload.com/~jmadar/lab7/q2.sh' in q2_content, "Must access q2.sh on my server"
+    assert 'https://learn.operatoroverload.com/~jmadar/jwt-client/q2.sh' in q2_content, "Must access q2.sh on my server"
     
 
 def test_q2_execute():
