@@ -1,5 +1,7 @@
 # Introduction
 
+Use the Codespaces button to create an environment to do your work.
+
 JWT is a standard way to pass trusted information between systems.
 https://JWT.io has lots of good information and tools regarding JWTs.
 
